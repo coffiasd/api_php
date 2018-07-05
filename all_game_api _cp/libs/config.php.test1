@@ -1,0 +1,144 @@
+<?php
+if(!defined('INDEX_FILE')){
+    die('error entry file');
+}
+
+
+date_default_timezone_set("PRC");
+
+define('VERSION', '1.0', true);
+define('DB_HOST', "rm-uf655q86z3er0q7z1.mysql.rds.aliyuncs.com", true);
+define('DB_PORT',3306);
+define('DB_DATABASE', "app", true);
+define('DB_USERNAME', "wooduan", true);
+define('DB_PASSWORD', "Wooduan@ssjj", true);
+define('DB_SLOW_TIME', 100, true);
+define('DB_SLOW_FILE', "db_slow_query.csv", true);
+define('ERROR_FILE', "error.log", true);
+define('DEBUG', true); //是否开启debug模式
+
+define('TICKET_TIMEOUT',300 );
+
+define('SIGN_KEY','29luo631hk6rwo0mk651gi5s0l5d7haa');
+
+define('EXT','.php');
+
+//渠道登录对应文件
+$channel_login = [
+    4 => 'Loginverify4399',
+    6 => 'Loginverifyuc',
+    7 => 'Loginverify360',
+    8 => 'Loginverifybaidu',
+    9 => 'Loginverifyxiaomi',
+    10 => 'Loginverifyyyb',
+    11 => 'Loginverifymz',
+    12 => 'Loginverifyhuawei',
+    13 => 'Loginverifyoppo',
+    14 => 'Loginverifyvivo',
+    15 => 'Loginverifyjl',
+    16 => 'Loginverifykp',
+    17 => 'Loginverifylenovo',
+	22 => 'Loginverifyyw',  //hw  add  易玩
+	21 => 'Loginverifyzy',  //hw  add  掌阅
+];
+
+$channel_notify = [
+    'huawei' => 'Notifyhuawei',
+    'uc' => 'Notifyuc',
+    'qwzw' => 'Notifyqwzw',
+    'ssjj' => 'Notifyssjj',
+    'google' => 'Notifygoogle',
+    'm360' => 'Notifym360',
+    'vivo' => 'Notifyvivo',
+    'xiaomi' => 'Notifyxiaomi',
+    'jl' => 'Notifyjl',
+    'lenovo' => 'Notifylenovo',
+    'oppo' => 'Notifyoppo',
+    'mz' => 'Notifymz',
+    'wd' => 'Notifywd',
+    'bd' => 'Notifybaidu',
+    'vietnam' => 'Notifyvietnam',
+    'kp' => 'Notifykp',
+    'yyb'=>'Notifyyyb',
+	'yw'=>'Notifyyw',   //hw add  易玩
+	'zy'=>'Notifyzy',   //hw add  掌阅
+];
+
+//渠道前缀
+$channelPrex = [
+    1=>'ap',
+    2=>'gg',
+    4=>'43',
+    5=>'wd',
+    6=>'uc',
+    7=>'36',
+    8=>'bd',
+    9=>'xm',
+    10=>'yb',
+    11=>'mz',
+    12=>'hw',
+    13=>'op',
+    14=>'vv',
+    15=>'jl',
+    16=>'cp',
+    17=>'lv',
+    18=>'vn',
+    19=>'ss',
+    20=>'le',
+	21=>'zy',   //hw  add 掌阅
+	22=>'ew',   //hw  add 易玩
+    1000=>'',
+    101=>'wd',
+    110=>'wd',
+    111=>'wd',
+    112=>'wd',
+    113=>'wd',
+    114=>'wd',
+    115=>'wd',
+    116=>'wd',
+    117=>'wd',
+    118=>'wd',
+    119=>'wd',
+    102=>'wd',
+    501=>'wd',
+    502=>'wd',
+    503=>'wd',
+    504=>'wd',
+    505=>'wd',
+    506=>'wd',
+    507=>'wd',
+    508=>'wd',
+    509=>'wd',
+    510=>'wd',
+    601=>'wd',
+    602=>'wd',
+    603=>'wd',
+    604=>'wd',
+    605=>'wd',
+    606=>'wd',
+    607=>'wd',
+    608=>'wd',
+    609=>'wd',
+    610=>'wd',
+];
+
+$ip_white_list = [
+   '122.225.193.170',
+    ];
+
+//渠道生成订单
+$channel_pay = [
+    '11' => 'Paymz',
+    '7'=>'Paym360',
+    '9' => 'Payxiaomi',
+    '12' => 'Payhuawei',
+    '14' => 'Payvivo',
+    '15' => 'Payjl',
+    '16' => 'Paykp',
+    '17' => 'Paylenovo',
+    '19' => 'Paysumsang',
+	'21' => 'Payzhangyue',   //hw add 掌阅
+	'22' => 'Payyiwan',   //hw add 易玩
+];
+
+?>
